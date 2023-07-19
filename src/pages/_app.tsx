@@ -1,7 +1,13 @@
-import { type AppType } from "next/dist/shared/lib/utils";
+import {type AppType} from "next/dist/shared/lib/utils";
+import {Analytics} from '@vercel/analytics/react';
 
 const MyApp: AppType = ({ Component, pageProps }) => {
-  return <Component {...pageProps} />;
+    return (
+        <>
+            <Component {...pageProps} />
+            <Analytics/>
+        </>
+    );
 };
 
 export default MyApp;
